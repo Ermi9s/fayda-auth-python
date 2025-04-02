@@ -134,10 +134,98 @@ python app.py
 
 Test endpoints:
 
-```bash
+- Authorize
+
+```json
 curl "http://localhost:5252/authorize?utm_source=http://localhost:3000"
-curl -X POST http://localhost:5252/authenticate -H "Content-Type: application/json" -d '{"session_id": "<session_id>", "auth_code": "mock_auth_code", "csrf_token": "<state>"}'
+
+Response
+
+{
+    "message": "",
+    "data": {
+        "auth_url": "",
+        "session_id": "",
+        "utm_referer": "",
+        "utm_source": ""
+    },
+    "status_code": 200
+}
 ```
+
+- Authenticate
+  - ```json
+    curl -X POST http://localhost:5252/authenticate -H "Content-Type: application/json" -d '{"session_id": "<session_id>", "auth_code": "mock_auth_code", "csrf_token": "<state>"}'
+
+    Request Body
+
+    {
+        "session_id":"V2IQ58T72qx5HMatkV78aVDBtwNIVLvb",
+        "auth_code":"ZUlqAjzTwDhOFc5erg7V6BrPfeRAYShMiOdnRBC88eY",
+        "csrf_token":"9Uc0Ibzo80VNDtPSNEQjwQu8"
+    }
+
+    Response Body
+
+    {
+        "type": "object",
+        "properties": {
+            "message": {
+                "type": "string"
+            },
+            "data": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "object",
+                        "properties": {
+                            "kebele": {
+                                "type": "string"
+                            },
+                            "region": {
+                                "type": "string"
+                            },
+                            "woreda": {
+                                "type": "string"
+                            },
+                            "zone": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "birthdate": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "picture": {
+                        "type": "string"
+                    },
+                    "residenceStatus": {
+                        "type": "string"
+                    },
+                    "sub": {
+                        "type": "string"
+                    }
+                }
+            },
+            "status_code": {
+                "type": "integer"
+            }
+        }
+    }
+    ```
+
+    ```
+
+    ```
 
 ---
 
