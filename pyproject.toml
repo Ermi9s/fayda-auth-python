@@ -31,8 +31,8 @@ dependencies = [
     "cryptography>=36.0.0",
     "requests>=2.26.0",
     "jwcrypto>=1.5.0",
+    "validator-collection>=1.5.0"  # or the version you use
 ]
-
 [project.optional-dependencies]
 test = [
     "pytest>=7.0.0",
