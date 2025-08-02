@@ -50,8 +50,7 @@ packages = [
   "fayda_auth.handlers",
   "fayda_auth.utils",
   "fayda_auth.services",
-  "fayda_auth.config",
-  "fayda_auth.tests"
+  "fayda_auth.config"
 ]
 include-package-data = true
 
