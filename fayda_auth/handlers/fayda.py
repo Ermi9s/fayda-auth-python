@@ -19,7 +19,7 @@ class FaydaOAuthHandler:
         self.client_assertion_type = client_assertion_type
 
     def authorize(self, host_manager: HostConfigManager, request_origin: str, request_referer: str = "") -> Dict[str, str]:
-        redirect_uri = host_manager.get_redirect_uri(request_origin)
+        redirect_uri = 'com.example.advouch://callback' ##
         if not redirect_uri:
             raise FaydaAuthError(f"Invalid origin: {request_origin}", 400)
 
