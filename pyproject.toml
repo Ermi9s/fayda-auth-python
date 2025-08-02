@@ -45,7 +45,14 @@ test = [
 # "Documentation" = ""  # Optional
 
 [tool.setuptools]
-packages = ["fayda_auth"]
+packages = [
+  "fayda_auth",
+  "fayda_auth.handlers",
+  "fayda_auth.utils",
+  "fayda_auth.services",
+  "fayda_auth.config",
+  "fayda_auth.tests"
+]
 include-package-data = true
 
 [tool.setuptools.package-data]

@@ -1,8 +1,13 @@
 from typing import Dict, Optional, Any, Union, List
-from .handlers.fayda import FaydaOAuthHandler
+
+from fayda_auth.handlers.fayda import FaydaOAuthHandler
+# from .handlers.fayda import FaydaOAuthHandler
 from .config.redis import RedisConfig
 from .config.hosts import HostConfigManager, HostConfig
 from .exceptions import FaydaAuthError
+
+
+FaydaOAuthHandler
 
 class FaydaAuth:
     def __init__(
