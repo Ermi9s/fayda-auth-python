@@ -11,7 +11,7 @@ setup(
         "cryptography==41.0.3",
         "requests==2.31.0",
         "validator-collection==1.5.0",
-        "setuptools==78.1.0"
+        "setuptools==78.1.0",
         "jwcrypto>=1.5.0"
     ],
     author="Awura Computing PLC",
